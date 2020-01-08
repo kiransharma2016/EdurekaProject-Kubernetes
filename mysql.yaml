@@ -31,7 +31,7 @@ spec:
       volumes:
       - name: mysqldata
         persistentVolumeClaim:
-         claimName: myclaim
+         claimName: mysqldata-claim
       - name: secret-vol
         secret:
          secretName: db-secret
