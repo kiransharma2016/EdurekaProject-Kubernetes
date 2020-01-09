@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: edurekaprojectweb
+spec:
+  restartPolicy: Never
+  containers:
+
+  - name: users
+    image: hshar/users
+  - name: admin
+    image: hshar/admin
