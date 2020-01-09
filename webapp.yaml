@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: EdurekaProject
+  name: EdurekaProjectWeb
 spec:
   restartPolicy: Never
   containers:
