@@ -21,8 +21,8 @@ spec:
       - name: users
         image: hshar/users
         ports:
-        - containerPort: 8081
+        - containerPort: 80
       - name: admin
         image: hshar/admin
         ports:
-        - containerPort: 8081
+        - containerPort: 80
