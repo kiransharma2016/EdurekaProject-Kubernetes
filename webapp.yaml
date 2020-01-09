@@ -3,9 +3,7 @@ kind: Pod
 metadata:
   name: Edureka-Project
 spec:
-
   restartPolicy: Never
-
   containers:
 
   - name: users
