@@ -1,28 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp1
+  name: webapp
   labels:
     app: webapp-sql
     tier: frontend
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: webapp-sql
-      tier: frontend
-  template:
-    metadata:
-      labels:
-        app: webapp-sql
-        tier: frontend
-    spec:
-      containers:
-      - name: users
-        image: hshar/users
-        ports:
-        - containerPort: 80
-      - name: admin
-        image: hshar/admin
-        ports:
-        - containerPort: 80
+ containers:
+ - name: users
+   image: hshar/users
+ - name: admin
+   image: hshar/admin
