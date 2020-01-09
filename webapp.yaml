@@ -1,13 +1,14 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Pod
 metadata:
-  name: webapp
-  labels:
-    app: webapp-sql
-    tier: frontend
+  name: Edureka-Project
 spec:
- containers:
- - name: users
-   image: hshar/users
- - name: admin
-   image: hshar/admin
+
+  restartPolicy: Never
+
+  containers:
+
+  - name: users
+    image: hshar/users
+  - name: admin
+    image: hshar/admin
