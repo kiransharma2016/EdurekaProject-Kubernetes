@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adminapp
+  labels:
+    app: admin
+    tier: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: admin
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: admin
+        tier: frontend
+    spec:
+      containers:
+      - name: admin
+        image: hshar/admin
+        ports:
+        - containerPort: 8081
