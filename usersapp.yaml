@@ -14,7 +14,7 @@ spec:
   template:
     metadata:
       labels:
-        app: users
+        app: webapp-sql
         tier: frontend
     spec:
       containers:
@@ -22,3 +22,11 @@ spec:
         image: hshar/users
         ports:
         - containerPort: 8081
+        volumeMounts:
+          - name: secret-vol
+            mountPath: "/var/secrets/"
+            readOnly: true
+      volumes:
+        - name: secret-vol
+          secret:
+           secretName: db-secret

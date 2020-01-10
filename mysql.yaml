@@ -25,13 +25,7 @@ spec:
         volumeMounts:
         - name: mysqldata
           mountPath: /data/mysqldata
-        - name: secret-vol
-          mountPath: "/etc/secrets"
-          readOnly: true
       volumes:
       - name: mysqldata
         persistentVolumeClaim:
          claimName: mysqldata-claim
-      - name: secret-vol
-        secret:
-         secretName: db-secret
