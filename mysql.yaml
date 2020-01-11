@@ -9,7 +9,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mysql
+      app: sql
       tier: backend
   template:
     metadata:
