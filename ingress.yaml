@@ -15,3 +15,7 @@ spec:
         backend:
           serviceName: adminapp
           servicePort: 30738
+      - path: /.*
+        backend:
+          serviceName: userapp
+          servicePort: 30971      
