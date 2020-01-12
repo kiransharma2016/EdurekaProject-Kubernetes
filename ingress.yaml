@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: edurekaproject
@@ -6,16 +6,12 @@ spec:
   rules:
   - host: EdurekaK8Project-367551644.us-east-1.elb.amazonaws.com
     http:
-     paths:
-      - path:
-         backend:
-          serviceName: userapp
-          servicePort: 30971
+      paths:
       - path: /users
-         backend:
+        backend:
           serviceName: userapp
           servicePort: 30971
       - path: /admin
-         backend:
+        backend:
           serviceName: adminapp
           servicePort: 30738
