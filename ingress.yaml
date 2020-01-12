@@ -14,8 +14,4 @@ spec:
       - path: /admin
         backend:
           serviceName: adminapp
-          servicePort: 80
-      - path: /.*
-        backend:
-          serviceName: userapp
-          servicePort: 80      
+          servicePort: 80    
