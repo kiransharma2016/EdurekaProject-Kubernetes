@@ -10,12 +10,12 @@ spec:
       - path: /users
         backend:
           serviceName: userapp
-          servicePort: 30971
+          servicePort: 80
       - path: /admin
         backend:
           serviceName: adminapp
-          servicePort: 30738
+          servicePort: 80
       - path: /.*
         backend:
           serviceName: userapp
-          servicePort: 30971      
+          servicePort: 80      
