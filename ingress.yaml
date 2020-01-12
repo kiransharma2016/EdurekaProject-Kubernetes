@@ -6,15 +6,16 @@ spec:
   rules:
   - host: EdurekaK8Project-367551644.us-east-1.elb.amazonaws.com
     http:
-      paths:
-      - backend:
+     paths:
+      - path:
+         backend:
           serviceName: userapp
           servicePort: 30971
-      paths: /users
-      - backend:
+      - path: /users
+         backend:
           serviceName: userapp
           servicePort: 30971
-      paths: /admin
-      - backend:
+      - path: /admin
+         backend:
           serviceName: adminapp
           servicePort: 30738
