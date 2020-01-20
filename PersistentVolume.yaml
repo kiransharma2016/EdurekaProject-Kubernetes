@@ -27,3 +27,16 @@ spec:
       storage: 1Gi
   
 ---
+  
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mysqldata-claim
+  annotations:
+    volume.beta.kubernetes.io/storage-class: "aws-efs"
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Mi
