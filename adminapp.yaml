@@ -30,3 +30,17 @@ spec:
         - name: secret-vol
           secret:
            secretName: db-secret
+   ---
+     
+apiVersion: v1
+kind: Service
+metadata:
+  name: adminapp
+spec:
+  selector:
+    app: admin
+    tier: frontend
+  ports:
+   - port: 80
+  type: NodePort
+  
